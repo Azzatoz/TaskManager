@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Заголовок -->
+    <TextView
+        android:id="@+id/weekTitleTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Month"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"/>
+
+    <!-- Кнопки для изменения вида -->
+    <Button
+        android:id="@+id/changeButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Month"
+        android:layout_below="@id/weekTitleTextView"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_alignParentEnd="true"/>
+
+    <!-- Календарь и листание дней -->
+    <HorizontalScrollView
+        android:id="@+id/weekScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/changeButton"
+        android:layout_marginTop="8dp">
+
+        <LinearLayout
+            android:id="@+id/weekLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:baselineAligned="false">
+
+            <!-- Понедельник -->
+            <RelativeLayout
+                android:id="@+id/mondayLayout"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/mondayTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Monday"
+                    android:layout_margin="8dp"/>
+
+                <LinearLayout
+                    android:id="@+id/mondayTasksLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_below="@id/mondayTextView"
+                    android:visibility="gone">
+                    <!-- Здесь будут задачи для Понедельника -->
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <!-- Вторник -->
+            <RelativeLayout
+                android:id="@+id/tuesdayLayout"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/tuesdayTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Tuesday"
+                    android:layout_margin="8dp"/>
+
+                <LinearLayout
+                    android:id="@+id/tuesdayTasksLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_below="@id/tuesdayTextView"
+                    android:visibility="gone">
+                    <!-- Здесь будут задачи для Вторника -->
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <!-- Среда -->
+            <RelativeLayout
+                android:id="@+id/wednesdayLayout"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/wednesdayTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Wednesday"
+                    android:layout_margin="8dp"/>
+
+                <LinearLayout
+                    android:id="@+id/wednesdayTasksLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_below="@id/wednesdayTextView"
+                    android:visibility="gone">
+                    <!-- Здесь будут задачи для Среды -->
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <!-- Четверг -->
+            <RelativeLayout
+                android:id="@+id/thursdayLayout"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/thursdayTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Thursday"
+                    android:layout_margin="8dp"/>
+
+                <LinearLayout
+                    android:id="@+id/thursdayTasksLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_below="@id/thursdayTextView"
+                    android:visibility="gone">
+                    <!-- Здесь будут задачи для Четверга -->
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <!-- Пятница -->
+            <RelativeLayout
+                android:id="@+id/fridayLayout"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/fridayTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Friday"
+                    android:layout_margin="8dp"/>
+
+                <LinearLayout
+                    android:id="@+id/fridayTasksLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_below="@id/fridayTextView"
+                    android:visibility="gone">
+                    <!-- Здесь будут задачи для Пятницы -->
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <!-- Суббота -->
+            <RelativeLayout
+                android:id="@+id/saturdayLayout"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/saturdayTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Saturday"
+                    android:layout_margin="8dp"/>
+
+                <LinearLayout
+                    android:id="@+id/saturdayTasksLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_below="@id/saturdayTextView"
+                    android:visibility="gone">
+                    <!-- Здесь будут задачи для Субботы -->
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <!-- Воскресенье -->
+            <RelativeLayout
+                android:id="@+id/sundayLayout"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/sundayTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Sunday"
+                    android:layout_margin="8dp"/>
+
+                <LinearLayout
+                    android:id="@+id/sundayTasksLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_below="@id/sundayTextView"
+                    android:visibility="gone">
+                    <!-- Здесь будут задачи для Воскресенья -->
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+    </HorizontalScrollView>
+
+
+    <!-- Задачи под каждым днем -->
+    <LinearLayout
+        android:id="@+id/tasksLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@id/weekScrollView"
+        android:layout_marginTop="16dp">
+
+        <!-- Здесь вы можете добавить элементы для отображения задач -->
+
+    </LinearLayout>
+
+    <!-- Кнопка добавления задачи -->
+    <Button
+        android:id="@+id/addTaskButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/plus"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"/>
+
+</RelativeLayout>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/week">
+
+    <!-- Взаимосвязи приложения -->
+    <fragment
+        android:id="@+id/week"
+        android:name="com.example.taskmanager.ui.home.Week"
+        android:label="@string/Tasks"
+        tools:layout="@layout/fragment_week">
+
+        <!-- action для перехода в com.example.taskmanager.ui.home.MonthFragment -->
+        <action
+            android:id="@+id/action_fragment_week_to_fragment_month"
+            app:destination="@id/month"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/dashboard"
+        android:name="com.example.taskmanager.ui.dashboard.DashboardFragment"
+        android:label="@string/title_dashboard"
+        tools:layout="@layout/fragment_dashboard" />
+
+    <fragment
+        android:id="@+id/notifications"
+        android:name="com.example.taskmanager.ui.notifications.NotificationsFragment"
+        android:label="@string/title_notifications"
+        tools:layout="@layout/fragment_notifications" />
+
+    <!-- Фрагмент com.example.taskmanager.ui.home.MonthFragment-->
+    <fragment
+        android:id="@+id/month"
+        android:name="com.example.taskmanager.ui.home.Month"
+        android:label="fragment_month"
+        tools:layout="@layout/fragment_month">
+
+        <!-- action для перехода в weekFragment -->
+        <action
+            android:id="@+id/action_fragment_month_to_fragment_week"
+            app:destination="@id/week" />
+    </fragment>
+</navigation>
